@@ -8,6 +8,7 @@ Backend: FastAPI, Pydantic, JWT, SQLAlchemy
 Database: MySQL (개발 환경)
 
 
+
 🔧 개발 단계 요약
 
 1. 환경 구축 및 초기 설정
@@ -17,9 +18,11 @@ SQLite + SQLAlchemy를 이용해 DB 구성
 CORS 설정을 통해 React ↔ FastAPI 통신 설정
 
 
+
 2. 백엔드: 인증 및 사용자 API
    
 🗂 주요 파일
+
 main.py: FastAPI 앱 실행, 라우터 등록
 routes.py: /signup, /login, /me API 라우팅
 auth.py: JWT 토큰 생성, 해시/검증
@@ -27,16 +30,21 @@ schemas.py: UserCreate, UserLogin 등의 Pydantic 스키마
 models.py: SQLAlchemy ORM 모델 (User 테이블)
 database.py: DB 연결 및 테이블 생성
 
+
 🔐 기능 요약
+
 비밀번호 해시화 (passlib)
 JWT 토큰 생성 및 유효성 검사 (pyjwt)
 현재 로그인된 사용자 정보 반환 (/me)
 로그인 실패 시 오류 메시지 전달
 
 
-4. 프론트엔드: 사용자 인터페이스
+
+3. 프론트엔드: 사용자 인터페이스
+
    
 🗂 주요 파일
+
 App.js: 라우팅 및 다크모드 설정
 LoginPage.js, SignupPage.js: 인증 관련 폼 UI
 Dashboard.js: 로그인 후 사용자 정보와 네비게이션
@@ -44,11 +52,13 @@ HomePage.js, MyPage.js, AboutPage.js: 대시보드 내 콘텐츠
 ChartExample.js: Chart.js 기반 선 그래프 시각화
 
 🎨 구현 UI 요소
+
 로그인 및 회원가입 페이지에 세련된 카드 UI
 로그인 성공 시 사용자 이름과 로그아웃 버튼 표시
 메뉴(홈, 마이페이지, 소개)는 중앙 정렬 + 확대된 버튼
 다크 모드 지원: darkMode props로 스타일 전환
 선 그래프 페이지 (홈): x축만 표시 + 레벨 텍스트 점 위에 표시
+
 
 
 ⚙️ 주요 구현 포인트
@@ -70,6 +80,7 @@ Chart.js 시각화
 잘못된 토큰 또는 로그인 안 된 경우 자동으로 /login으로 리디렉션
 로그인 실패 시 에러 메시지 표시
 미들웨어 및 예외 핸들러를 통해 FastAPI 오류 응답 제어
+
 
 
 🧱 백엔드 테이블 생성 이슈 해결 팁
