@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Python cache and test
+*.log
+*.sqlite3
+
+# Uvicorn reload artifacts
+*.pid
+
+# Node modules for frontend
+frontend/node_modules/
+frontend/.env
+
+# Build files
+frontend/build/
+frontend/dist/
+
+# coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# PyInstaller
+*.spec
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Optional: IDE-specific
+.idea/
