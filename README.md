@@ -1,11 +1,15 @@
 ✅ 프로젝트 개요
-목표: 회원가입/로그인 기능을 포함한 사용자 인증 기반 대시보드 웹 애플리케이션 개발기술 스택:
+
+목표: 회원가입/로그인 기능을 포함한 사용자 인증 기반 대시보드 웹 애플리케이션 개발
+
+기술 스택:
 Frontend: React, Bootstrap, Chart.js 등
 Backend: FastAPI, Pydantic, JWT, SQLAlchemy
 Database: MySQL (개발 환경)
 
 
 🔧 개발 단계 요약
+
 1. 환경 구축 및 초기 설정
 React로 프론트엔드 앱 생성 (npx create-react-app)
 FastAPI로 백엔드 서버 구성 (uvicorn, fastapi, pydantic 설치)
@@ -14,6 +18,7 @@ CORS 설정을 통해 React ↔ FastAPI 통신 설정
 
 
 2. 백엔드: 인증 및 사용자 API
+   
 🗂 주요 파일
 main.py: FastAPI 앱 실행, 라우터 등록
 routes.py: /signup, /login, /me API 라우팅
@@ -21,6 +26,7 @@ auth.py: JWT 토큰 생성, 해시/검증
 schemas.py: UserCreate, UserLogin 등의 Pydantic 스키마
 models.py: SQLAlchemy ORM 모델 (User 테이블)
 database.py: DB 연결 및 테이블 생성
+
 🔐 기능 요약
 비밀번호 해시화 (passlib)
 JWT 토큰 생성 및 유효성 검사 (pyjwt)
@@ -28,13 +34,15 @@ JWT 토큰 생성 및 유효성 검사 (pyjwt)
 로그인 실패 시 오류 메시지 전달
 
 
-3. 프론트엔드: 사용자 인터페이스
+4. 프론트엔드: 사용자 인터페이스
+   
 🗂 주요 파일
 App.js: 라우팅 및 다크모드 설정
 LoginPage.js, SignupPage.js: 인증 관련 폼 UI
 Dashboard.js: 로그인 후 사용자 정보와 네비게이션
 HomePage.js, MyPage.js, AboutPage.js: 대시보드 내 콘텐츠
 ChartExample.js: Chart.js 기반 선 그래프 시각화
+
 🎨 구현 UI 요소
 로그인 및 회원가입 페이지에 세련된 카드 UI
 로그인 성공 시 사용자 이름과 로그아웃 버튼 표시
@@ -45,8 +53,6 @@ ChartExample.js: Chart.js 기반 선 그래프 시각화
 
 ⚙️ 주요 구현 포인트
 
-항목
-설명
 로그인 상태 유지
 JWT 토큰을 localStorage에 저장 후 /me API로 인증 상태 확인
 React Router 연동
@@ -69,7 +75,7 @@ Chart.js 시각화
 🧱 백엔드 테이블 생성 이슈 해결 팁
 질문: "SQLAlchemy는 통신하고 정보는 넣는데 테이블 생성이 안됨"
 원인: Base.metadata.create_all(bind=engine) 코드가 누락되었거나, 실행 타이밍이 잘못되었을 수 있음.
-해결: database.py에서 DB 초기화 시점에 다음 코드 포함해야 함:
+해결: database.py에서 DB 초기화 시점에 다음 코드 포함해야 함
 python
 복사편집
 from models import Base
