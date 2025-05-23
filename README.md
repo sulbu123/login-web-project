@@ -3,7 +3,7 @@
 목표: 회원가입/로그인 기능을 포함한 사용자 인증 기반 대시보드 웹 애플리케이션 개발
 
 기술 스택:
-Frontend: React, Bootstrap, Chart.js 등
+Frontend: React, Bootstrap, Chart.js
 
 Backend: FastAPI, Pydantic, JWT, SQLAlchemy
 
