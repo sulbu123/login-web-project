@@ -4,7 +4,9 @@
 
 기술 스택:
 Frontend: React, Bootstrap, Chart.js 등
+
 Backend: FastAPI, Pydantic, JWT, SQLAlchemy
+
 Database: MySQL (개발 환경)
 
 
