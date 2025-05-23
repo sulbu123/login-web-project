@@ -14,6 +14,7 @@ Database: MySQL (개발 환경)
 🔧 개발 단계 요약
 
 1. 환경 구축 및 초기 설정
+
 React로 프론트엔드 앱 생성 (npx create-react-app)
 
 FastAPI로 백엔드 서버 구성 (uvicorn, fastapi, pydantic 설치)
